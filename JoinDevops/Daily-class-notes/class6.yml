@@ -1,0 +1,17 @@
+## Package Management
+	Ps -ef
+	Ps
+	Kill
+	Run level
+
+ 
+## Network Management
+	Netstat -ltnp
+
+## Real Time Project Initiatialization
+	Sever connection via terminal [gitbash/putty/superputty/mobxterm]
+	
+
+
+
+

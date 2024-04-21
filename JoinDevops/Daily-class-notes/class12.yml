@@ -1,0 +1,10 @@
+Idempotency 
+	- A nature of program which should not change how many times we run it should not change result
+	
+$ mysql -h db.<databasename> -uroot -pExpenseApp01 -e 'SHOW DATABASES;'
+
+
+Completed EXPENSE PROJECT using Shell Script
+Frontend
+Backend
+Db

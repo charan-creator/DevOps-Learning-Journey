@@ -1,0 +1,31 @@
+Functions
+	- A block of code that can do some work
+	
+	Functions-name(){
+	// code
+	}
+	Function-name
+	
+Logs
+	- We should persist/store logs of any coding, this is the best practice.
+Redirections 
+	- By default only success output will be redirected.
+	- 1--> success
+	- 2-->Error
+	- $--> Both success and error
+	
+Colors
+-----------
+31-red
+32-green
+33
+
+Echo -e "\e[31m hello,world" 
+
+Loops
+
+Sql installation
+
+
+
+

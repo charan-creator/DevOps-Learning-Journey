@@ -1,0 +1,87 @@
+Variables
+ read --> to read input from the user
+read -s <data> --> to hide data to the end user 
+Read -p "enter your name:" myname
+Echo $myname
+
+Arguments/parameters
+
+🧑‍💻 Parameters vs. Arguments: What's the Difference?
+
+In programming, parameters and arguments are often confused, but they play distinct roles.
+
+Here's an analogy:
+	• Imagine a function as a recipe.
+	• The parameters are like the ingredients listed in the recipe (e.g., flour, sugar, eggs).
+	• The arguments are the actual ingredients you use when baking (e.g., 2 cups of flour, 1 cup of sugar, 3 eggs).
+
+Parameters are part of the function declaration, defining the input that the function can accept.
+	• Parameters define the type and number of values that a function or method can accept
+	
+	•  Parameters are variables listed in a function or method declaration. They serve as placeholders for data that will be provided when the function or method is called.
+	
+Arguments are the actual values passed to the function when it is called, filling the parameters during execution
+: Arguments (also known as actual arguments) are the values supplied to a function when it is called. These values serve as inputs during the function’s execution.
+result = add(5, 3)
+# Here, 5 and 3 are arguments
+def add(x, y):
+    # Here, x and y are parameters
+    return x + y
+
+Arguments supply the values to the parameters of a function. The number of arguments must match the number of parameters in the function definition.
+
+using the correct terminology helps maintain clarity in your code discussions! 
+
+
+
+Data types 
+	- In shell datatypes are not that much important
+
+Special Variables
+	- All variables -$@
+	- No.of variables passed -$#
+	- Script name -$0
+	- Current working directory $PWD
+	- Current path - $PWD
+	- Home directory of user -$HOME
+	- Which user running -$USER
+	- Hostname $HOSTNAME
+	- Process id identification $$
+	- Process id of last background command $!
+	- To make something into background &
+	- Exit status of previous command $?
+	
+Conditions
+
+Installation.sh
+------------------
+Userid=$(id -u)
+If [ $userid -ne 0 ]
+Then
+Echo ""
+Else
+Echo ""
+Fi
+
+Sudo dnf install mysql -y
+
+Echo "this script is proceeding"
+
+Disadvantages of Shell Script :
+-------------------------------------
+	- Limited Error handling : Shell Script will not stop even if it is having an error, it is user responsibility to verify.
+	- Limited functionality 
+	- Performance overhead
+	- Lack of strong typing
+	- Security Risks
+	
+Advantages of shell script:
+-----------------------------------
+	- Automation
+	- System administration
+	- Task automation
+	- Easier to run
+	
+Running processes are stored in `cd /proc`
+
+

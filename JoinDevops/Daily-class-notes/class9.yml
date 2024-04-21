@@ -1,0 +1,11 @@
+Shell Script beginning Session
+------------------------------------
+What is shell ?
+Git vs github
+How to execute shell script
+
+Git workflow (git init , clone, add, commit, push)
+
+Github personal access token creation
+
+$ git config --global credential.helper store

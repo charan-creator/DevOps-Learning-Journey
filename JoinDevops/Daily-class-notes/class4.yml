@@ -1,0 +1,15 @@
+User and group Management
+
+
+# Interview Questions (Expected)
+1. How to add a user to a particular group
+
+2. How to remove a user from a particular group
+
+3. How to get the list of users in a particular group
+
+4. How to get the list of groups in our system
+
+5. How to remove a particular user from a particular group
+
+6. How to identify the user in which group he is part of ?
