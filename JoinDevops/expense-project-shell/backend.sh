@@ -83,7 +83,7 @@ mysql -h db.nagacharan.site -uroot -p${mysql_root_password} < /app/schema/backen
 VALIDATE $? "Schema loading"
 
 systemctl restart backend &>>$LOGFILE
-VALIDATE $? "Restarting Backend" backend"
+VALIDATE $? "Restarting Backend"
 
 
 
