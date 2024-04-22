@@ -47,7 +47,7 @@ unzip /tmp/frontend.zip &>>$LOGFILE
 VALIDATE $? "Extracting frontend code"
 
 #check your repo and change according to it
-cp /home/ec2-user/DevOps-Learning-Journey/JoinDevops/expense-project-shell/expense.confS /etc/nginx/default.d/expense.conf &>>$LOGFILE
+cp /home/ec2-user/DevOps-Learning-Journey/JoinDevops/expense-project-shell/expense.conf /etc/nginx/default.d/expense.conf &>>$LOGFILE
 VALIDATE $? "Copied expense conf"
 
 systemctl restart nginx &>>$LOGFILE
