@@ -67,7 +67,7 @@ VALIDATE $? "Installing nodejs Dependencies"
 cp /home/ec2-user/DevOps-Learning-Journey/JoinDevops/expense-project-shell/backend.service /etc/systemd/system/backend.service &>>$LOGFILE
 VALIDATE $? "Copied backend service"
 
-systemctl daemon reload &>>$LOGFILE
+systemctl daemon-reload &>>$LOGFILE
 VALIDATE $? "Daemon Reload"
 
 systemctl start backend &>>$LOGFILE
