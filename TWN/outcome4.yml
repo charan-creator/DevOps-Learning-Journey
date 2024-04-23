@@ -1,0 +1,27 @@
+- code is hosted centrally on the internet is called `code repository`
+- Every developer will have the entire copy of the code locally
+- code is fetched from the remote repo and pushed to code repo
+- Git know how to merge changes automatically
+- Merge conflicts --> when same line was changed
+        - git can't able to fix it automatically. Have to be done manually
+
+- Best practice : push and pull often from remote repo
+- Every code change and file is tracked.
+- you can revert commits
+- Each change is labelled with commit messages
+
+Basic concepts of Git :
+
+- Remote Repository: where code lives 
+- Local Repository:  local copy of code
+- History : history of code changes (git log)
+- staging : changes to commit
+- Git clients: To execute git commands
+
+Git Workflow :
+---------------
+Working Directory ------> Staging area -------------> Local Repository ------> Remote Repository
+
+
+
+
