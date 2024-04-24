@@ -1,7 +1,7 @@
 How do you call other script in the current script ?
  Ans : there are two ways to achieve this task
  1. By using ./other-script-name.sh
- 2. By using $ source <other-script-name>.sh
+ 2. By using $ source ./<other-script-name>.sh
 
  The difference between both ways of doing is that :
  - if we use the first way then the process ID of two scripts is different and variable values will not change after calling other script.changes happened in other script will not affect current script.
