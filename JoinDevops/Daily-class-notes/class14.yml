@@ -3,3 +3,14 @@ Crontab
 `crontab.guru` website for more content related to crontab.
 
 
+df -hT --> to check the disk space in detail
+
+df -hT | grep xfs | awk -F " " '{print $6F}' | cut -d "%" -f1
+
+- 💻 Command Breakdown:
+df -hT: This command displays information about the file system usage on the current system in a human-readable format, including total space, used space, available space, and percentage of space used. The -h option displays the output in human-readable units (e.g., GB, MB, KB), and the -T option shows the file system type for each mounted file system.
+grep xfs: This command filters the output of the df command, keeping only lines that contain the string "xfs". This is useful for isolating information about specific file systems, in this case, those formatted with the XFS file system.
+awk -F " " '{print F6}': This command uses the awk utility to further process the output of the df command. The -F " " option specifies that the field separator is a space, and the '{print F6}' command prints the sixth field of each line. In this case, the sixth field corresponds to the percentage of space used.
+cut -d "%" -f1: This command uses the cut utility to extract the first field from each line, which is the percentage of space used without the "%" symbol.
+
+setup mail notification
