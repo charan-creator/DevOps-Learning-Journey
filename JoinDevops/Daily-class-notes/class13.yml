@@ -1,0 +1,32 @@
+How do you call other script in the current script ?
+ Ans : there are two ways to achieve this task
+ 1. By using ./other-script-name.sh
+ 2. By using $ source <other-script-name>.sh
+
+ The difference between both ways of doing is that :
+ - if we use the first way then the process ID of two scripts is different and variable values will not change after calling other script.changes happened in other script will not affect current script.
+ - if we use the second way then the process ID of two scripts is same and variable values will also be changed.Changes happened in other script will be reflected in the current script.
+
+ EX: Currrent script :
+ #!/bin/bash
+ COURSE="This is current script"
+ echo "Before calling other script $COURSE"
+ echo "The process Id of $COURSE is $$"
+ ./other-script.sh #source other-script.sh
+ echo "After calling the other script $COURSE"
+
+ other script :
+ #!/bin/bash
+ COURSE="This is other script"
+ 
+
+- Script to delete a old log files
+
+ FILES=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +14) # To delete files older than 14 days
+
+ while IFS= read -r line
+ do 
+   echo "Deleting file: $line"
+   rm -rf $line
+  done <<< $FILES
+
