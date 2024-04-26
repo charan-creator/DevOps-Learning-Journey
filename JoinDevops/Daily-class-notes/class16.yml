@@ -1,0 +1,19 @@
+what is adhoc command in ansible ?
+ - it is ansible command line to run modules against nodes directly, instead of playbooks. Some emergency purpose
+
+
+what is playbook ?
+
+- playbook is a list of plays to execute one or more tasks
+
+variables
+
+datatypes
+
+functions
+
+loops
+
+conditions
+
+
