@@ -3,3 +3,33 @@ How would you know the disk usage using the shell script commands?
 Give the purpose of the shebang line.
 
 Tell us about the ‘$#’ use in shell scripting.
+
+1. Write a program to count no of times each word present in the string and save it in the 
+dictionary?
+2. Three members have same password one I have to change write a script for this example?
+3. Write a script for how to push the repository and build the job in Jenkins?
+4. What are EC2 and VPC how we create & write a script?
+5. How have you used Bash shell scripts to implement version control and manage changes to 
+code, including any techniques you have used to automate testing or build processes?
+6. Can you describe your experience using bash shell scripts to automate tasks in your 
+previous roles?
+7. How have you used bash scripting to manage and manipulate files and directories, 
+including any techniques you have used to automate backups or file transfers?
+8. Can you explain how you have used bash scripts to manage processes and system 
+resources, including any techniques you have used to monitor or optimize performance?
+9. How have you used bash scripts to automate repetitive tasks, such as configuring system 
+settings or setting up new users?
+10. Can you describe your experience using bash scripts for system administration tasks, 
+including any techniques you have used to automate server configurations or manage 
+network settings?
+11. How have you used bash scripts to interact with APIs or web services, including any 
+techniques you have used to parse and manipulate data?
+12. Can you discuss your experience using bash scripts for debugging and troubleshooting, 
+including any techniques you have used to diagnose and fix errors or issues?
+13. How have you used bash scripts to implement security controls, including any techniques 
+you have used to manage user permissions or implement firewalls?
+14. Can you explain how you have used bash scripts to automate software installations and 
+updates, including any techniques you have used to manage dependencies or configure 
+application settings?
+15. How have you used bash scripts to integrate with other tools or services, such as version 
+control systems or continuous integration platforms, to automate workflows or tasks?
