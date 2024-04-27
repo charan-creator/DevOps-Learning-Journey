@@ -61,3 +61,38 @@ building, and deploying code?
 have used these tools in your previous roles?
 30. What are some of the key benefits of using Git for version control, and how have you seen 
 these benefits in your work?
+
+what is bare repository in git and what is the purpose of it and how to create it ?
+ > A bare repository in Git is a special type of repository that lacks a working directory. This means it only contains the Git history and metadata, but not the actual project files.
+> Bare repositories are primarily used for sharing code between developers. They act as central servers where developers can push and pull changes. They are not intended for local development as they lack the working files needed for editing
+> You can create a bare repository using the git init --bare command. This will create a new directory containing only the Git data
+
+Git rebase vs reset vs revert 
+  - Git rebase is simmilar to git merge but there is a difference. The end goal of both git rebase and git merge is to keep all the commits in a single line. But, rebase will delete
+  - git merge is straightforward and non-destructive, but it can clutter the history. Git rebase provides a cleaner history but requires caution. Choose based on your team’s preferences and project need
+  - git revert to safely undo changes in a public context, and reserve git reset for local adjustments on private branches
+  - [Reference](https://geekflare.com/git-reset-vs-revert-vs-rebase/)
+
+what is git revlist ?
+ - To list commit in onebranch which are not in another branch `git rev-list --oneline  master ^origin/master`
+
+what is git squash ?
+
+what is git cherry-pick ?
+
+what is gitreflog ?
+
+what is git clean -i ?
+
+what git clean -f will do ? Forcefully remove all untracked files
+
+git clean -fx ? To remove all ignored files from current directory and subdirectory
+
+git clean -xn ? To preview all the files that will be cleaned
+
+git clean -fd ? To remove all untracked directories and files in them 
+
+git clean -dn ? to preview all the directories that will be cleaned.
+
+what is git bisect ?
+
