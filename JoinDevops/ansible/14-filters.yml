@@ -5,68 +5,68 @@
     ansible.builtin.debug:
       msg: "hello {{course | default('Ansible') }}"
   
-  - name: upper case
-    hosts: localhost
-    vars:
-      greeting: "Hello, Good Morning"
-    tasks:
-    - name: convert into uppercase
-      ansible.builtin.debug:
-        msg: "{{ greetings | upper }}"
+- name: upper case
+  hosts: localhost
+  vars:
+    greeting: "Hello, Good Morning"
+  tasks:
+  - name: convert into uppercase
+    ansible.builtin.debug:
+      msg: "{{ greetings | upper }}"
       
+- name: lower case
+  hosts: localhost
+  vars: 
+    greeting: "Hello, Good Morning"
+  tasks:
   - name: lower case
-    hosts: localhost
-    vars: 
-      greeting: "Hello, Good Morning"
-    tasks:
-    - name: lower case
-      ansible.builtin.debug:
-        msg: "{{ GREEtings | lower }}"
+    ansible.builtin.debug:
+      msg: "{{ GREEtings | lower }}"
   
+- name: remove duplicates
+  hosts: localh0st
+  vars:
+    numbers: [1, 3, 4, 4, 3, 5, 1]
+  tasks:
   - name: remove duplicates
-    hosts: localh0st
-    vars:
-      numbers: [1, 3, 4, 4, 3, 5, 1]
-    tasks:
-    - name: remove duplicates
-      ansible.builtin.debug:
-        msg: "{{ numbers | unique }}"
+    ansible.builtin.debug:
+      msg: "{{ numbers | unique }}"
 
+- name: print min and max
+  hosts: localhost
+  vars:
+    ages: [12, 35, 13, 53]
+  tasks:
   - name: print min and max
-    hosts: localhost
-    vars:
-      ages: [12, 35, 13, 53]
-    tasks:
-    - name: print min and max
-      ansible.builtin.debug:
-        msg: " min age: {{ ages | min }}, max age: {{ ages | max }}"
+    ansible.builtin.debug:
+      msg: " min age: {{ ages | min }}, max age: {{ ages | max }}"
 
-  - name: convert dictionary into items/list
-    hosts: localhost
-    vars:
-      my_dict: #this is called as dictionary or map or key/value pairs
-        course: Ansible
-        Trainer: charan
-        Duration: 120 hrs
-    tasks:
-    - name: before convert
-      ansible.builtin.debug:
-        msg: "Before convert: {{ my_dict }}"
-    - name: after convert
-      ansible.builtin.debug:
-        msg: "After convert: {{ my_dict | dict2items }}"
-    
-  - name: convert items to dictionary
-    hosts: localhost
-    vars:
-      my_list:
-      - {'key': 'Course', 'value': 'Ansible'}
-      - {'key': 'Trainer', 'value': 'Charan'}
-      - {'key': 'Duration', 'value': '120hr'}
-    tasks:
-    - name: before convert
-      ansible.builtin.debug:
-        msg: "Before convert: {{ my_list }}"
-    - name: after convert
-      ansible.builtin.debug:
-        msg: "After convert: {{ my_list | items2dict }}"
+- name: convert dictionary into items/list
+  hosts: localhost
+  vars:
+    my_dict: #this is called as dictionary or map or key/value pairs
+      course: Ansible
+      Trainer: charan
+      Duration: 120 hrs
+  tasks:
+  - name: before convert
+    ansible.builtin.debug:
+      msg: "Before convert: {{ my_dict }}"
+  - name: after convert
+    ansible.builtin.debug:
+      msg: "After convert: {{ my_dict | dict2items }}"
+  
+- name: convert items to dictionary
+  hosts: localhost
+  vars:
+    my_list:
+    - {'key': 'Course', 'value': 'Ansible'}
+    - {'key': 'Trainer', 'value': 'Charan'}
+    - {'key': 'Duration', 'value': '120hr'}
+  tasks:
+  - name: before convert
+    ansible.builtin.debug:
+      msg: "Before convert: {{ my_list }}"
+  - name: after convert
+    ansible.builtin.debug:
+      msg: "After convert: {{ my_list | items2dict }}"
