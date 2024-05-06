@@ -1,20 +1,20 @@
 - name: conditions
-hosts: web
-become: yes
-tasks:
-- name: check user exists or not
+  hosts: web
+  become: yes
+  tasks:
+  - name: check user exists or not
   ansible.builtin.command: id expense
   register: USER
   ignore_erros: true
 
-- name: print user information
+  - name: print user information
   ansible.builtin.debug:
-    msg: "user info: {{USER}}"
+  msg: "user info: {{USER}}"
 
-- name: create user
+  - name: create user
   anisble.builtin.command: useradd expense
   when: USER.rc !=0 #condition
 
-- name: say hello
+  - name: say hello
   ansible.builtin.debug:
-    msg: "Hello"
+  msg: "Hello"
