@@ -12,5 +12,9 @@
       AWS: 2
       Docker: 1
     RealProject: true #boolean
+  tasks:
+  - name: print variables
+    ansible.builtin.debug:
+      msg: "course: {{course}}, Tools covered: {{Tools}}, Experince is: {{Experience}}; is real project: {{RealProject}}"
+      
 
-    
