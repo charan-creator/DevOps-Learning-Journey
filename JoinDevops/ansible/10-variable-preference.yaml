@@ -3,7 +3,7 @@
   vars:
     WISHES: "Morning from play variable"
   vars_files:
-  - vars.yaml
+  - vars.yml
   vars_prompt:
   - name: WISHES
     prompt: Please enter wishes
