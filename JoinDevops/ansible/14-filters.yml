@@ -21,7 +21,7 @@
   tasks:
   - name: lower case
     ansible.builtin.debug:
-      msg: "{{ GREEtings | lower }}"
+      msg: "{{ greeting | lower }}"
   
 - name: remove duplicates
   hosts: localh0st
