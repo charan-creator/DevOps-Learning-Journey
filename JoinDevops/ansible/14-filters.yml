@@ -12,7 +12,7 @@
   tasks:
   - name: convert into uppercase
     ansible.builtin.debug:
-      msg: "{{ greetings | upper }}"
+      msg: "{{ greeting | upper }}"
       
 - name: lower case
   hosts: localhost
