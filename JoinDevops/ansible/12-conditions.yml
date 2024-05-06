@@ -3,18 +3,18 @@
   become: yes
   tasks:
   - name: check user exists or not
-  ansible.builtin.command: id expense
-  register: USER
-  ignore_erros: true
+    ansible.builtin.command: id expense
+    register: USER
+    ignore_erros: true
 
   - name: print user information
-  ansible.builtin.debug:
-  msg: "user info: {{USER}}"
+    ansible.builtin.debug:
+      msg: "user info: {{USER}}"
 
   - name: create user
-  anisble.builtin.command: useradd expense
-  when: USER.rc !=0 #condition
+    anisble.builtin.command: useradd expense
+      when: USER.rc !=0 #condition
 
   - name: say hello
-  ansible.builtin.debug:
-  msg: "Hello"
+    ansible.builtin.debug:
+      msg: "Hello"
