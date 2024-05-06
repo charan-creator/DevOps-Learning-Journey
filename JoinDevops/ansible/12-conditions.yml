@@ -12,7 +12,7 @@
       msg: "user info: {{USER}}"
 
   - name: create user
-    anisble.builtin.command: useradd expense
+    ansible.builtin.command: useradd expense
     when: USER.rc !=0 #condition
 
   - name: say hello
