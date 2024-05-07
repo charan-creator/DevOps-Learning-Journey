@@ -1,3 +1,4 @@
+
 --> variables
     variables from play level, task level, vars_file, args, inventory.ini file
 
@@ -11,3 +12,24 @@
     
 --> loops
      {{item}}
+
+what is adhoc command in ansible ?
+ - it is ansible command line to run modules against nodes directly, instead of playbooks. Some emergency purpose
+
+
+what is playbook ?
+
+- playbook is a list of plays to execute one or more tasks
+
+variables
+
+data types
+
+functions
+
+loops
+
+conditions
+
+
+

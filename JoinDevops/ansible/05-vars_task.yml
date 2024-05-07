@@ -1,0 +1,16 @@
+- name: variables
+  hosts: localhost
+  vars:
+    Course: "Terraform"
+    Trainer: "Nagacharan"
+  tasks:
+  - name: print information
+    vars: #tasklevel variable
+      Course: "DevOps"
+    ansible.builtin.debug:
+      msg: "Hi, We are learning {{Course}} from {{Trainer}}"
+
+  - name: print information
+    ansible.builtin.debug:
+      msg: "Hi, we are learning {{Course}} from {{Trainer}}"
+
