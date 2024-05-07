@@ -14,3 +14,4 @@ awk -F " " '{print F6}': This command uses the awk utility to further process th
 cut -d "%" -f1: This command uses the cut utility to extract the first field from each line, which is the percentage of space used without the "%" symbol.
 
 setup mail notification
+

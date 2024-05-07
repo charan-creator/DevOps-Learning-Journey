@@ -1,0 +1,7 @@
+Introduction to Ansible
+--> Ansible is a configuration management tool
+--> It works on push based model
+--> ansible adhoc commands
+
+json vs xml vs yaml
+

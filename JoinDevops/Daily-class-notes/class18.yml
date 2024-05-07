@@ -1,0 +1,9 @@
+ansible shell vs ansible command module
+
+For simple command without variables , redirections, pipes, etc, we can use ansible command module
+
+to run shell script inside ansible or run some complex commands like variables, redirections, pipes etc that time we have to use shell module
+
+ansible localhost -m dnf -a "name=nginx state=latest"
+
+project implementation
