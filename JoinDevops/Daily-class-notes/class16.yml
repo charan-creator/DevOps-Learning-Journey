@@ -1,3 +1,18 @@
+
+--> variables
+    variables from play level, task level, vars_file, args, inventory.ini file
+
+--> data types
+    numbers, boolean, map,dictionary, string
+--> conditions
+    when
+--> functions
+    filters . It is denoted by | 
+    filter=data transformation/manipulation
+    
+--> loops
+     {{item}}
+
 what is adhoc command in ansible ?
  - it is ansible command line to run modules against nodes directly, instead of playbooks. Some emergency purpose
 
@@ -15,5 +30,6 @@ functions
 loops
 
 conditions
+
 
 

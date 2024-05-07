@@ -1,0 +1,10 @@
+Ansible roles :
+
+Ansible   config
+
+Handlers in ansible: Notifiers , usually when there is a change in config we can notify some task to restart the server
+
+Deployment [create directory, remove old code, download new code]
+
+ansible vault
+

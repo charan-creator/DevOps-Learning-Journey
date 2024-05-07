@@ -1,0 +1,46 @@
+Introduction to IAAS 
+
+what is terraform and how it is different from ansible
+
+Advantages of infra as code :
+  - Version control --> We can maintain different versions of infra multiple persons can collaborate to create infra
+  - Same infra across multiple environments
+  - inventory -> list of resources for the project in terms of infra.
+  - dependency
+  - Cost reduction
+  - code reuse
+  - state management
+
+Terraform can be used for multiple vendors not just limited to cloud
+
+Terraform uses Hashicorp configuration language (HCL)
+
+variables
+datatypes
+loops
+conditions
+functions
+Terraform related concepts :
+    outputs
+    locals
+    datasources
+    count
+    dynamic block
+
+connecting aws with terraform 
+
+EC2 instance creation:
+--> provider configuration
+--> Security group and ec2 instance creation
+
+
+Terraform workflow :
+  terraform init
+  terraform plan
+  terraform validate
+  terraform apply -auto-approve
+  terraform destroy
+
+
+
+
