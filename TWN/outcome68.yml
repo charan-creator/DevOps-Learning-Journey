@@ -1,0 +1,15 @@
+Jenkins UI Tour
+
+Roles for jenkins app
+1. Jenkins administrator
+  > operations or devops team
+  > administraters and manages jenkins
+  > sets up jenkins cluster
+  > install plugins
+  > backup jenkins data
+
+2. Jenkins user
+ > Developer or devops team
+ > creating the actual jobs to run workflows
+
+ 
