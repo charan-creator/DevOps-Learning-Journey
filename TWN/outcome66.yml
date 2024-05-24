@@ -1,0 +1,28 @@
+## Build Automation Tool - Jenkins
+
+- There are different build tools in the market for build automation. Jenkins is one among the most widely used tools along with githubactions. 
+
+** Build Automation Tool **
+- Software that you install on a dedicated server
+- Has UI for configuration
+- Install all the tools you need (docker, Gradle/maven/npm, etc)
+- configure the tasks (run tests, build app, deployment etc)
+- Configure the automatic trigger of the workflow
+
+
+What can you do with jenkins ?
+- Run tests
+- Build artifacts
+- publish artifacts
+- Deploy artifacts
+- Send notifications
+
+Needs to integrate with other tools
+
+plugins are used for integrating with multiple tools
+
+setup needs to be done only once
+
+plugins, credentials etc can be used for different projects
+
+
