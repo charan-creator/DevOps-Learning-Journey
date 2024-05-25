@@ -1,0 +1,31 @@
+# Make docker available on jenkins
+
+`$ docker stop <containerid>` --> to stop the container
+
+`$ docker volume ls`
+
+`$ docker run -p 8080:8080 -p 50000:50000 -d =v jenkins_home:/var/jenkins_home -v /var/run/docker.sock;/var/run/docker.sock -v $(which docker): /usr/bin/docker jenkins/jenkins:lts`
+
+`$ chmod 666 /var/run/docker.sock`
+
+push images to docker repository
+
+- configure dockerhub credentials on 
+
+`use secret text(s) or file(s)` under build environment of jenkins to get our globally configured credentials into our job
+
+There was a plugin named `bindings` used for it.
+
+we have to give variable names 'USERNAME' 'PASSWORD'
+
+under build section, have to click on execute shell and then
+
+```
+docker build -t <name of the dockerhub repository>:version .
+echo $PASSWORD | docker login -u $USERNAME --password-stdin
+docker push <dockerhub repository>:version
+```
+
+push docker image to a nexus repository
+
+
