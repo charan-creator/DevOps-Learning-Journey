@@ -1,0 +1,11 @@
+jenkins Basics demo
+
+- create simple freestyle job & plugin configuration
+
+installed nodejs plugin
+- installed and integrated maven plugin in the simple freestyle job
+- Created github credentials in the jenkins
+- integrated jenkins job with git repository and ran java-maven-project and ran job to test and package the application 
+
+we can see the job files in jenkins server at `$ ls /var/jenkins_home/jobs` and  we can see job files at `$ cd /var/jenkins_home/workspace/`
+

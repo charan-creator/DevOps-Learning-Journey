@@ -1,0 +1,17 @@
+installing build tools
+-----------------------
+As a jenkins user, we have to create job to automate your apps workflow
+
+we are going to see example for two apps i.e; one on java app and two on javascript app
+- Java with maven build tool
+- Run tests
+- Build jar file
+
+and for javascript app
+- node app
+- Run tests
+- package and push to repo
+
+maven and npm needs to be available on jenkins
+
+Depending upon your app(programming language) you need to have different tools installed and configured on jenkins
