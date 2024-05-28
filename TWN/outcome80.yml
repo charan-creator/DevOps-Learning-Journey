@@ -1,0 +1,11 @@
+How to trigger jenkins build job?
+
+1. Manually
+2. Automatically 
+3. scheduling
+
+we will configure to start pipeline automatically.
+
+we have to install plugin 'github/gitlab' and once it was done then we can able to see it on jenkins configuraiton part of jenkins
+
+webhook is a feaature that enables you to send notifications to webapplications in response to event in a group or project. 

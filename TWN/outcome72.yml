@@ -1,0 +1,14 @@
+freestyle to pipeline job
+
+chained freestyle jobs
+> Limitations
+> configuration via UI (not scripting)
+> Limited to input fields of plugin
+> not suitable for complex workflows
+
+pipeline jobs
+> suitable for CI/CD
+> scripting-pipeline as code
+> usinig plugins
+> executing tools
+

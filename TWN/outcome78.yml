@@ -1,0 +1,11 @@
+credentials in jenkins
+
+- credentials plugin is used to store and manage them centrally
+
+There are two types of credentials 
+1. system (only available on jenkins server not for jenkins jobs)
+
+2. Global (Everywhere accessible)
+
+id = reference for your job
+
