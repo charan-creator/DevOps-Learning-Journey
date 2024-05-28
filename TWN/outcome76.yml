@@ -1,0 +1,12 @@
+Introduction to multibranch pipeline
+
+Multi-branch pipeline
+> Run tests on every branch
+> Execute deployment only on master branch
+> When merged into master: test, build and deploy app
+
+Pipeline for all the branches
+Different behaviour based on branch
+
+Branch based logic for multibranch pipeline
+-----------------------------------------------

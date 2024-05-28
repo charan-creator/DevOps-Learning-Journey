@@ -1,0 +1,107 @@
+jenkins file syntax
+
+def gv
+CODE_CHANGES = getGitchange()
+pipeline {
+    agent any 
+    parameters { # to define selection
+        string (name: 'VERSION', defaultValue: '', description: 'version to deploy on prod')
+        choice(name: 'VERSIOn', choices: ['1.1.0', '1.3.8', '1.4.8'], description: '')
+        booleanParam(name: 'executeTests', defaultValue: true, descrition: '')
+    }
+    tools {
+      maven 'Maven' #Maven is a name at global configuration for that particular build tool
+    }
+    environment [
+      NEW_VERSION = '1.3.9'
+    ]
+      stages {
+        stage ("init"){
+          steps {
+            script {
+              gv = load "script.groovy"
+            }
+          }
+        }
+        stage ("build"){
+           when {
+            expression {
+              BRANCH_NAME == 'dev' && CODE_CHANGES == true
+            }
+          }
+          steps {
+            echo "building the application ..."
+            echo "building version ${NEW_VERSION}" #" is mandatory ' will not work
+          }
+        }
+        stage ("test"){
+
+          when {
+            expression {
+              params.executeTests = true
+              BRANCH_NAME == 'dev' || BRANCH_NAME == 'test'
+            }
+          }
+          steps {
+            echo "testing the application..."
+          }
+        }
+        stage ("deploy"){
+          input {
+            message "select the environment on deploy to"
+            ok "Done"
+            parameters {
+              choice(name: 'ENV', choices: ['dev', 'staging', 'prod'], description: '')
+            }
+
+          }
+          steps {
+            script {
+              gv.deployApp()
+              echo "Deploying to ${ENV}"
+            }
+          }
+          steps {
+            echo "deploying the application...."
+            echo "deploying with ${SERVER_CREDENTIALS}"
+            echo "deploying version ${params.VERSION}"
+            sh "${SERVER_CREDENTIALS}"
+            withCredentials([
+              usernamePassword(credentials: 'server_credentials', usernameVariable: USER, passwordVariable: PWD)
+            ]){
+              sh "some script ${user} ${PWD}"
+            }
+          }
+        }
+      }
+      post {
+        always {
+          //
+        }
+        success {
+
+        }
+        failure {
+
+        }
+      }
+    }
+  }
+
+  
+  we can define conditions for each stage
+
+  what variables are available from jenkins ? we can see at <serverip>/env-vars.html
+
+
+
+using credentials in jenkins file
+> define credentials in jenkins UI
+> "credentials"(credentialId) bind the credentials to your env variable
+> We need "credentials binding " plugin
+
+> With tools attribute we can access build tools for our projects
+
+input parameters in jenkins 
+--------------------------------
+

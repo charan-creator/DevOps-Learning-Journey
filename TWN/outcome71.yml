@@ -28,4 +28,30 @@ docker push <dockerhub repository>:version
 
 push docker image to a nexus repository
 
+we have to set the insecure registeries at `vim /etc/docker/daemon.json` location of the host
+
+{
+"insecure-registries": ["<ip address of nexus repository>:<port for secure connection on nexus>"]
+
+}
+
+systemctl restart docker
+
+have to start jenkins again to get jenkins container id have to go to docker ps -a
+docker start <container id>
+
+ls -l /var/run/docker.sock
+
+docker exec -u 0 -it <container id> --> entering container as a root
+
+chmod 666 /var/run/docker.sock
+
+
+Have to create credentials in jenkins for nexus repo
+
+hostip=nexushost ip
+
+docker build -t <hostip:<port>>/<name of the dockerhub repository>:version .
+echo $PASSWORD | docker login -u $USERNAME --password-stdin <hostip:<port>>
+docker push <dockerhub repository>:version
 

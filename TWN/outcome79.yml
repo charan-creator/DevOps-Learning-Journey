@@ -1,0 +1,115 @@
+jenkins Shared library
+
+it is an extension to pipeline
+
+it has it's own repository written in groovy
+
+reference shared logic in jenkinsfile
+
+may not use same tech stack, but some logic same
+
+EX: Company wide nexus repository
+
+EX: company wide slack channel
+
+Don't need to replicate the code
+
+🧰 Shared Libraries in Jenkins: A Powerful Tool for Pipeline Reusability Shared libraries in Jenkins are reusable Groovy code libraries that enable you to modularize your pipeline code and share it across multiple projects. This promotes code reuse, maintainability, and consistency in your Jenkins pipelines. 
+
+🛠️ Creating and Using Shared Libraries: You can create a shared library by storing Groovy scripts in a Git repository. These scripts can contain functions, steps, and other reusable code elements. You can then import the shared library into your Jenkins pipelines using the @Library directive. 
+
+📈 Benefits of Shared Libraries: Using shared libraries offers several advantages:
+
+Code Reusability: Avoid duplicating code across multiple pipelines.
+Maintainability: Make changes in one place and have them reflected in all pipelines using the library.
+Consistency: Ensure consistent behavior across different pipelines.
+Improved Collaboration: Share and collaborate on reusable code elements with your team.
+
+
+create shared library in project/pipeline 
+--------------------------
+create repository
+write the groovy code
+make shared library available globally or for project
+
+use the standard library in jenkins file to extend the pipeline
+
+structure of shared library :
+-----------------------------
+vars folder
+  functions that we call from jenkinsfile
+  Each function/execution step is its own groovy file
+
+  Build jar file
+  Build docker image
+  push docker image
+src folder
+  helper code
+resources folder
+  To use external libraries
+  non-groovy file like powershell etc
+
+
+buildjar.groovy
+----------------
+#!/usr/bin/env groovy
+
+def call(){
+
+}
+
+
+in jenkins >> configuration >> Global pipeline libraries 
+
+use shared libraries in jenkinsfile
+-----------------------------------
+in jenkins file at the beginning has to give @library('<filename given at configuration part of jenkins')
+
+extract logic into groovy classes :
+---------------------------------------
+create package named com.example in src folder of jenkins file and create a class inside package that we created.  and Name it as Docker.groovy
+
+#!/usr/bin/env groovy
+
+package com.example
+
+class Docker implements Serializable {
+  def script
+  Docker (script) {
+    this.script = script
+  }
+  def buildDockerImage(String imageName) {
+    script.echo "building the docker image..."
+    script.withCredentials([usernamePassword(credentialsId: 'docker-hub-repo', passwordvariable: 'PASS', usernamevariable: 'USER')]){
+      script.sh "docker build -t $imageName ."
+      script.sh "echo $script.PASS | docker login -u $script.USER --password-stdin"
+      script.sh "docker push $imageName"
+}
+  }
+}
+
+
+buildimage.groovy in vars directory of jenkinsshared library:
+-----------------------------------------------------------
+#!/usr/bin/env groovy
+
+import com.example.Docker
+
+def call(String imageName) {
+  return new Docker(this).buidDockerImage(imageName)
+}
+
+
+split "buildDockerImage" into separate steps :
+------------------------------------------------
+
+project scoped jenkinsshared library:
+--------------------------------------
+
+library identifier: 'jenkins-shared-library@master', retriever: modernSCM( [$class: 'GITSCMSource', 
+remote: '<github repository',
+credentialsId: '<credentialname in jenkins>'])
+@library('jenkins-shared-library@2.0')
+
+
+

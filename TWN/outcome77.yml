@@ -1,0 +1,6 @@
+wrapup jenkins jobs
+
+There are 3 types of jobs.
+ 1. Freestyle job  (execute single task)
+ 2. pipeline job  (better for cicd)
+ 3. Multibranch pipeline (parent of pipeline job)

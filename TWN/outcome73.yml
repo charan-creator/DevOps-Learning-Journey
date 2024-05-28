@@ -1,0 +1,40 @@
+creating pipeline job
+
+scripted vs declarative
+
+scripted :
+> First syntax 
+> Groovy Engine
+> advanced scripting capabilities and high flexibility
+> difficult to start
+
+Declarative :
+  > More recent addition
+  > easier to get started but not that powerful
+  > pre-defined structure
+
+  jenkinsfile
+  --------------
+  pipeline {
+    agent any {
+      stages {
+        stage ("build"){
+          steps {
+            echo "building the application ..."
+          }
+        }
+        stage ("test"){
+          steps {
+            echo "testing the application..."
+          }
+        }
+        stage ("deploy"){
+          steps {
+            echo "deploying the application...."
+          }
+        }
+      }
+    }
+  }
+
+  

@@ -1,0 +1,30 @@
+Kubernets Module
+------------------
+
+1. Introduction to kubernetes
+
+2. Main k8s components
+
+3. Minikube & kubectl -local setup
+
+- Main kubectl commands
+
+- YAML configuration file
+
+- demo project
+
+- orgainze components - Namespace
+
+- Configure connectivity - Services
+
+- make app available outside -ingress
+
+- persist data = volumes
+
+- configMap & secret as volume types
+
+- deploy stateful apps -statefulset
+
+- package manager of k8s - Helm
+
+- Extending the k8s API - Operator

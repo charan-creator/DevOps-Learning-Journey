@@ -1,0 +1,45 @@
+create a full pipeline with Jenkinsfile
+
+def gv # to import groovy script
+
+pipeline {
+agent any
+tools {
+maven 'Maven'
+}
+stages{
+stage("init"){
+steps {
+script {
+gv = load "script.groovy"
+}
+}
+}
+stage("build jar"){
+steps {
+script {
+echo "building the application..."
+sh "mvn package"
+}
+}
+}
+stage ("build image"){
+steps {
+script{
+echo "building the docker image"
+withCredentials([usernamePassword(credentialsId: 'docker-hub-repo', passwordvariable: 'PASS', usernamevariable: 'USER')]){
+sh 'docker build -t <dockerhubrepo:tag> .'
+sh "echo $PASS | docker login -u $USER --password-stdin"
+sh 'docker push <docker-hub-repo:tag>'
+}
+}
+}
+stage("deploy"{
+steps{
+script {
+echo "deploying the application.."
+}
+}
+}
+}
+}
