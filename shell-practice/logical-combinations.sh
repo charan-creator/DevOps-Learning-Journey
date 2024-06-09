@@ -1,0 +1,3 @@
+if [[ $VAR_A[0] -eq 1 && ($VAR_B = "bee" || $VAR_T = "tee") ]] ; then
+    command...
+fi
