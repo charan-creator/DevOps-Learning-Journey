@@ -1,0 +1,14 @@
+state and remote state
+
+-> 
+
+remtoe state:
+-> duplicate resources or errors, locking
+-> There should be a blocking mechanism. when one person is creating infra. It should be locked untitl it is completed.
+
+local state vs remote state
+---------------------------
+1. There is a chance you delete/edit the file..
+2. It will not work in collaboration environment
+3. There is a chance multiple persons apply/edit the infra
+
