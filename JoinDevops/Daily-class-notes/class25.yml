@@ -1,0 +1,23 @@
+variables
+datatypes
+loops
+  count based
+  for each
+  dynamic
+functions
+conditions
+
+outputs
+datasources
+locals
+state and remote state
+
+How to create multiple environment with terraform:
+--------------------------------------------------
+
+using tfvars:
+ > code is same --> resource definitions
+
+ DEV and PROD
+ ------------
+ 

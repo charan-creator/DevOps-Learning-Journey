@@ -1,0 +1,27 @@
+what is interpolcation ?
+- It is to connect text and variables
+-  It is a powerful feature in terraform that allows you to dynamically insert values into strings, enabling you to create flexible and reusable configurations. This is achieved by using ${...} syntax to reference variables, expressions, and functions within strings.
+or
+
+- the process of evaluating a string literal containing one or more placeholders, yielding a result in which the placeholders are replaced with their corresponding values.
+
+- Interpolation syntax allows you to reference variables, attributes of resources, call functions etc.
+
+Interpolation usecases: 
+ > Building dynamic resouce names and tags
+ > Constructing complex configuration blocks based on variables
+ > Generating dynamic file paths and URls
+ > creating conditional statements and loops within strings
+ > Referencing other resources and their attributes.
+
+
+what is locals ?
+- locals and variables are same, refering key-value pairs
+- locals can hold expressions and use it wherever you want. you can use variables inside locals but you cannot use variables/locals inside variables.
+
+datasources:
+-------------
+- If terraform queries some data from the aws like aws_iam then it is called datasource
+
+
+
