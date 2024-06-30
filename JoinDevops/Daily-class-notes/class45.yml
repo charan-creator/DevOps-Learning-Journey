@@ -1,0 +1,5 @@
+1. Infra should be ready to deploy application
+
+for i in <folder-1> <folder-2> <folder-3> <folder-4> ..<folder-n> ; do cd $i terraform apply -auto-approve; cd .. ; done
+
+ubuntu OS user 

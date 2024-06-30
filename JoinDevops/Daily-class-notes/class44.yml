@@ -1,0 +1,26 @@
+CI --> continuous Integration
+  Install dependencies
+  artifact 
+  java --> jar file
+  dotNet, Python, Nodejs -->zip
+  Upload artifact to some location
+
+Build file
+-----------
+Java --> Maven --> pom.xml
+python --> pip --> requirements.txt
+Nodejs --> npm --> package.json
+dotnet --> Nuget --> Project.json
+
+-q to quiet means to not to show the unwanted things in logs
+
+zip -r <filename.zip> <what-files-to-zip>
+
+Repository:
+-----------
+Git --> Store the code, not for package or artifacts
+Nexus --> Store the artifacts, not for code
+
+8081 --> Nexus
+8080 --> Jenkins
+

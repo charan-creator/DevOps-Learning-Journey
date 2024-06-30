@@ -1,0 +1,68 @@
+Jenkins - Introduction
+-----------------------
+
+Jenkins server installation using official docs
+
+trigger job, pre-build, build, post build
+
+freestyle disadvantages :
+----------------------------
+1. anyone can login and do the changes, difficult to track what went
+
+2. difficult to restore
+
+3. I can't see the history, no versions
+
+scripted way :
+----------------
+
+1. Review can be done before do something
+
+2. Easy to restore
+
+3. Track the changes
+
+4. Maintain history
+
+jenkins pipeline :
+-------------------
+
+```jenkinsfile
+pipeline {
+    agent any
+
+    stages {
+       stage("hello") {
+          steps {
+              echo "hello, world"
+          }
+       }
+    }
+}
+
+```
+
+Name should be jenkinsfile
+
+jenkins is a master node
+
+install agents and distribute the pipeline to the agents
+
+jenkins follows master node architecture
+
+1. when work is there master calls agent and ask them to do work
+2. daily agent comes to master to check any work
+
+To setup nodes, we have to go to the master node of jenkins and then `dashboard >> Manage jenkins >> Nodes` 
+
+cd /var/lib/jenkins --> home folder of jenkins
+
+how to configure github to jenkins webhook ?
+
+ system-1 something happened, we need to inform system-2
+
+ when events happens, those can be notified.
+
+ when developer pushed code to github, we need to trigger the pipeline
+
+
